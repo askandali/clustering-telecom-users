@@ -2,12 +2,24 @@
 
 This analysis focuses on clustering users from a telecommunication company based on their **mobile phone usage**. Based on this clustering, it is possible to extract valuable information about the users' behaviour and preferences per group.
 
+## Installation
+
+Use the packages
+
+```bash
+packs<-c("caTools","ggplot2","corrgram","HDclassif","cluster","mclust","FactMixtAnalysis","nnet","class","tree","pbkrtest","quantreg")
+
+install.packages(packs)
+
+
+```
+
 
 # Data
 
 The dataset consists of 3333 users living in California and their usage characteristics like:
 - phone calls and minutes in different periods of the day or in international networks
--  voicemail messages
+- voicemail messages
 - customer service calls
 - gender
 - city dial codes
@@ -23,12 +35,12 @@ After discarding information like customer service calls and transforming some v
 - the international network call minutes
 - the ration of day towards night call minutes with this transformation:
 
-K-means had bigger Silhouette* index and showed better visual results with 3 possible groups. 
+K-means and Hierarchical had similar Silhouette* index, but K-means showed better visual results with 3 possible groups. 
 
 >**Note:**The Silhouette index fluctuates between -1 and 1 and shows how well the observations are adapted to the respective groups.
 
 
-### Clustering plot
+### Clustering plot with K-means
 
 ![](images/ck.PNG) 
 
@@ -44,3 +56,4 @@ These results are more obvious in the next plots, where the characteristics per 
 ![](images/diff2.svg) 
 
 
+![](images/d3.svg) 
